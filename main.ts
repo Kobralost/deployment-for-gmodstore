@@ -67,7 +67,7 @@ async function main(){
 				return
 			}
 
-			console.log(body)
+			core.warning(body)
 			
 			core.setFailed(`An error occurred during upload, with HTTP code ${response.status} and message "${body.message}".`)
 			if (body.errors){
